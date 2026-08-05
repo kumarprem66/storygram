@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.storyverse</groupId>
+        <artifactId>storyverse-backend</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>storyverse-application</artifactId>
+    <name>StoryVerse - Application</name>
+    <description>Spring Boot application entry point. Aggregates all modules into a deployable artifact.</description>
+
+    <dependencies>
+        <!-- Infrastructure (transitively brings shared-kernel) -->
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-infrastructure</artifactId>
+        </dependency>
+
+        <!-- Business Modules -->
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-identity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-story</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-creator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-reader</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-community</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-search</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-recommendation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-notification</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-ai</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-analytics</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-billing</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-moderation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.storyverse</groupId>
+            <artifactId>storyverse-administration</artifactId>
+        </dependency>
+
+        <!-- Runtime: PostgreSQL driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Dev Tools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>kafka</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

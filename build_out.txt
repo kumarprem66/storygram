@@ -1,0 +1,244 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] StoryVerse Backend                                                 [pom]
+[INFO] StoryVerse - Shared Kernel                                         [jar]
+[INFO] StoryVerse - Infrastructure                                        [jar]
+[INFO] Identity Module                                                    [jar]
+[INFO] Story Module                                                       [jar]
+[INFO] Creator Module                                                     [jar]
+[INFO] Reader Module                                                      [jar]
+[INFO] Community Module                                                   [jar]
+[INFO] Search Module                                                      [jar]
+[INFO] Recommendation Module                                              [jar]
+[INFO] Notification Module                                                [jar]
+[INFO] AI Platform Module                                                 [jar]
+[INFO] Analytics Module                                                   [jar]
+[INFO] Billing Module                                                     [jar]
+[INFO] Moderation Module                                                  [jar]
+[INFO] Administration Module                                              [jar]
+[INFO] StoryVerse - Application                                           [jar]
+[INFO] 
+[INFO] -----------------< com.storyverse:storyverse-backend >------------------
+[INFO] Building StoryVerse Backend 0.0.1-SNAPSHOT                        [1/17]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------< com.storyverse:storyverse-shared-kernel >---------------
+[INFO] Building StoryVerse - Shared Kernel 0.0.1-SNAPSHOT                [2/17]
+[INFO]   from storyverse-shared-kernel\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-shared-kernel ---
+[INFO] skip non existing resourceDirectory D:\topics\StoryGram\storyverse-shared-kernel\src\main\resources
+[INFO] skip non existing resourceDirectory D:\topics\StoryGram\storyverse-shared-kernel\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-shared-kernel ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --------------< com.storyverse:storyverse-infrastructure >--------------
+[INFO] Building StoryVerse - Infrastructure 0.0.1-SNAPSHOT               [3/17]
+[INFO]   from storyverse-infrastructure\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-infrastructure ---
+[INFO] skip non existing resourceDirectory D:\topics\StoryGram\storyverse-infrastructure\src\main\resources
+[INFO] skip non existing resourceDirectory D:\topics\StoryGram\storyverse-infrastructure\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-infrastructure ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] -----------------< com.storyverse:storyverse-identity >-----------------
+[INFO] Building Identity Module 0.0.1-SNAPSHOT                           [4/17]
+[INFO]   from storyverse-identity\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-identity ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-identity ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ------------------< com.storyverse:storyverse-story >-------------------
+[INFO] Building Story Module 0.0.1-SNAPSHOT                              [5/17]
+[INFO]   from storyverse-story\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-story ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-story ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] -----------------< com.storyverse:storyverse-creator >------------------
+[INFO] Building Creator Module 0.0.1-SNAPSHOT                            [6/17]
+[INFO]   from storyverse-creator\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-creator ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-creator ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ------------------< com.storyverse:storyverse-reader >------------------
+[INFO] Building Reader Module 0.0.1-SNAPSHOT                             [7/17]
+[INFO]   from storyverse-reader\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-reader ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-reader ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ----------------< com.storyverse:storyverse-community >-----------------
+[INFO] Building Community Module 0.0.1-SNAPSHOT                          [8/17]
+[INFO]   from storyverse-community\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-community ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-community ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ------------------< com.storyverse:storyverse-search >------------------
+[INFO] Building Search Module 0.0.1-SNAPSHOT                             [9/17]
+[INFO]   from storyverse-search\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-search ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-search ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --------------< com.storyverse:storyverse-recommendation >--------------
+[INFO] Building Recommendation Module 0.0.1-SNAPSHOT                    [10/17]
+[INFO]   from storyverse-recommendation\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-recommendation ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-recommendation ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ---------------< com.storyverse:storyverse-notification >---------------
+[INFO] Building Notification Module 0.0.1-SNAPSHOT                      [11/17]
+[INFO]   from storyverse-notification\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-notification ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-notification ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --------------------< com.storyverse:storyverse-ai >--------------------
+[INFO] Building AI Platform Module 0.0.1-SNAPSHOT                       [12/17]
+[INFO]   from storyverse-ai\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-ai ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-ai ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ----------------< com.storyverse:storyverse-analytics >-----------------
+[INFO] Building Analytics Module 0.0.1-SNAPSHOT                         [13/17]
+[INFO]   from storyverse-analytics\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-analytics ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-analytics ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] -----------------< com.storyverse:storyverse-billing >------------------
+[INFO] Building Billing Module 0.0.1-SNAPSHOT                           [14/17]
+[INFO]   from storyverse-billing\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-billing ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-billing ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ----------------< com.storyverse:storyverse-moderation >----------------
+[INFO] Building Moderation Module 0.0.1-SNAPSHOT                        [15/17]
+[INFO]   from storyverse-moderation\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-moderation ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-moderation ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --------------< com.storyverse:storyverse-administration >--------------
+[INFO] Building Administration Module 0.0.1-SNAPSHOT                    [16/17]
+[INFO]   from storyverse-administration\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-administration ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-administration ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] ---------------< com.storyverse:storyverse-application >----------------
+[INFO] Building StoryVerse - Application 0.0.1-SNAPSHOT                 [17/17]
+[INFO]   from storyverse-application\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ storyverse-application ---
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ storyverse-application ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for StoryVerse Backend 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] StoryVerse Backend ................................. SUCCESS [  0.006 s]
+[INFO] StoryVerse - Shared Kernel ......................... SUCCESS [  3.182 s]
+[INFO] StoryVerse - Infrastructure ........................ SUCCESS [  2.260 s]
+[INFO] Identity Module .................................... SUCCESS [  0.610 s]
+[INFO] Story Module ....................................... SUCCESS [  0.734 s]
+[INFO] Creator Module ..................................... SUCCESS [  0.393 s]
+[INFO] Reader Module ...................................... SUCCESS [  0.516 s]
+[INFO] Community Module ................................... SUCCESS [  0.321 s]
+[INFO] Search Module ...................................... SUCCESS [  0.370 s]
+[INFO] Recommendation Module .............................. SUCCESS [  0.348 s]
+[INFO] Notification Module ................................ SUCCESS [  0.298 s]
+[INFO] AI Platform Module ................................. SUCCESS [  0.337 s]
+[INFO] Analytics Module ................................... SUCCESS [  0.684 s]
+[INFO] Billing Module ..................................... SUCCESS [  0.515 s]
+[INFO] Moderation Module .................................. SUCCESS [  0.365 s]
+[INFO] Administration Module .............................. SUCCESS [  0.184 s]
+[INFO] StoryVerse - Application ........................... SUCCESS [  0.595 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.691 s
+[INFO] Finished at: 2026-08-03T22:18:59+05:30
+[INFO] ------------------------------------------------------------------------

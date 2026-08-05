@@ -1,0 +1,6 @@
+package com.storyverse.notification.domain.vo;
+
+public enum NotificationType {
+    WELCOME, EMAIL_VERIFICATION, PASSWORD_RESET, STORY_PUBLISHED, NEW_FOLLOWER,
+    NEW_COMMENT, MENTION, RECOMMENDATION, ACHIEVEMENT, SYSTEM_ANNOUNCEMENT
+}
