@@ -1,25 +1,21 @@
--- ============================================================
--- StoryVerse Administration Module - V13 Migration
--- ============================================================
+-- StoryVerse Administration Module - V13 Migration (MySQL)
 
 CREATE TABLE feature_flags (
-    id                  UUID PRIMARY KEY,
-    name                VARCHAR(100) NOT NULL UNIQUE,
+    id                  CHAR(36) PRIMARY KEY,
+    name                VARCHAR(100) NOT NULL,
     description         VARCHAR(500),
     status              VARCHAR(20) NOT NULL DEFAULT 'DISABLED',
     rollout_percentage  INTEGER NOT NULL DEFAULT 0,
-    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at          TIMESTAMPTZ
-);
-
-CREATE UNIQUE INDEX idx_feature_flags_name ON feature_flags (name);
+    created_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at          TIMESTAMP NULL,
+    UNIQUE KEY uq_feature_flags_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE platform_config (
-    id          UUID PRIMARY KEY,
-    key         VARCHAR(100) NOT NULL UNIQUE,
+    id          CHAR(36) PRIMARY KEY,
+    `key`       VARCHAR(100) NOT NULL,
     value       TEXT NOT NULL,
     description VARCHAR(500),
-    updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
-CREATE UNIQUE INDEX idx_platform_config_key ON platform_config (key);
+    updated_at  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY uq_platform_config_key (`key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

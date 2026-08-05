@@ -35,14 +35,12 @@ public class UserJpaEntity extends AuditableBaseEntity {
     @Column(name = "display_name", nullable = false, length = 100)
     private String displayName;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false, length = 30)
     private String status;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role", length = 20)
-    @Enumerated(EnumType.STRING)
     private Set<String> roles = new HashSet<>();
 
     @Column(name = "email_verified", nullable = false)
