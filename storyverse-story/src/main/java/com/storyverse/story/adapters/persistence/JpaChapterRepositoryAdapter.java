@@ -3,6 +3,7 @@ package com.storyverse.story.adapters.persistence;
 import com.storyverse.story.domain.Chapter;
 import com.storyverse.story.ports.ChapterRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +36,20 @@ public class JpaChapterRepositoryAdapter implements ChapterRepository {
 
     @Override
     public Chapter save(Chapter chapter) {
-        ChapterJpaEntity entity = ChapterMapper.toEntity(chapter);
+        Optional<ChapterJpaEntity> existing = springDataRepository.findById(chapter.getId());
+
+        ChapterJpaEntity entity;
+        if (existing.isPresent()) {
+            entity = existing.get();
+            entity.setTitle(chapter.getTitle());
+            entity.setContent(chapter.getContent());
+            entity.setOrderIndex(chapter.getOrderIndex());
+            entity.setStatus(chapter.getStatus().name());
+            entity.setWordCount(chapter.getWordCount().getValue());
+        } else {
+            entity = ChapterMapper.toEntity(chapter);
+        }
+
         ChapterJpaEntity saved = springDataRepository.save(entity);
         return ChapterMapper.toDomain(saved);
     }
@@ -46,6 +60,7 @@ public class JpaChapterRepositoryAdapter implements ChapterRepository {
     }
 
     @Override
+    @Transactional
     public void deleteAllByStoryId(UUID storyId) {
         springDataRepository.deleteAllByStoryId(storyId);
     }

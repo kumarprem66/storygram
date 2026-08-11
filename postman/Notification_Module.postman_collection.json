@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "StoryVerse - Notification Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" },
+    { "key": "notificationId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Get My Notifications",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/notifications",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Mark Notification as Read",
+      "request": {
+        "method": "PUT",
+        "url": "{{baseUrl}}/api/v1/notifications/{{notificationId}}/read",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

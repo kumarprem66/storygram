@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "StoryVerse - Creator Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" },
+    { "key": "creatorId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Become Creator",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/creators",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"displayName\": \"Creative Writer\"\n}"
+        }
+      },
+      "event": [{ "listen": "test", "script": { "exec": ["var j=pm.response.json(); if(j.data) pm.collectionVariables.set('creatorId', j.data.creatorId);"] } }]
+    },
+    {
+      "name": "Get Creator Profile",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/creators/{{creatorId}}",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Update Creator Profile",
+      "request": {
+        "method": "PUT",
+        "url": "{{baseUrl}}/api/v1/creators/{{creatorId}}",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"displayName\": \"Pro Writer\",\n  \"biography\": \"I write fantasy and sci-fi stories\",\n  \"website\": \"https://mywebsite.com\",\n  \"language\": \"en\",\n  \"genres\": [\"FANTASY\", \"SCIENCE_FICTION\"],\n  \"penNames\": [\"The Wordsmith\"]\n}"
+        }
+      }
+    }
+  ]
+}

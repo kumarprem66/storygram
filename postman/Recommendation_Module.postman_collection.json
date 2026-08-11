@@ -1,0 +1,45 @@
+{
+  "info": {
+    "name": "StoryVerse - Recommendation Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" },
+    { "key": "storyId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Get Personalized Recommendations",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/recommendations?type=PERSONALIZED&limit=10",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Get Trending",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/recommendations?type=TRENDING&limit=10",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Get Similar Stories",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/recommendations/similar/{{storyId}}?limit=5",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Submit Feedback (Not Interested)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/recommendations/feedback?storyId={{storyId}}&feedbackType=NOT_INTERESTED",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

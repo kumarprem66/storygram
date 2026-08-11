@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "StoryVerse - AI Platform Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "AI Writer - Continue Writing",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/writer/continue?context=The%20hero%20stood%20at%20the%20edge%20of%20the%20cliff",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "AI Writer - Rewrite",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/writer/rewrite?text=The%20man%20walked%20slow%20to%20the%20store",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "AI Writer - Summarize",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/writer/summarize?text=This%20is%20a%20long%20story%20about...",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "AI Writer - Generate Title",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/writer/generate-title?description=A%20story%20about%20a%20young%20wizard%20discovering%20hidden%20powers",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "AI Reader - Summarize Story",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/reader/summarize-story?content=Once%20upon%20a%20time...",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "AI Reader - Explain Text",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/ai/reader/explain?text=The%20protagonist%20experienced%20an%20epiphany",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

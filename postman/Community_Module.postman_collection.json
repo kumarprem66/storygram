@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "StoryVerse - Community Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" },
+    { "key": "storyId", "value": "" },
+    { "key": "userId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Add Comment",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/stories/{{storyId}}/comments?content=Amazing%20story!",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Reply to Comment",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/stories/{{storyId}}/comments?parentCommentId=COMMENT_ID_HERE&content=I%20agree!",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Follow User",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/follows/{{userId}}",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Rate Story",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/stories/{{storyId}}/ratings?score=5",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "StoryVerse - Analytics Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Get Dashboard",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/analytics/dashboard",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Get Trends (Daily Story Reads)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/analytics/trends?metricType=STORY_READ&timeWindow=DAILY&from=2026-07-01&to=2026-08-05",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

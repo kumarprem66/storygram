@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "StoryVerse - Search Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Search Stories",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/search/stories?keyword=adventure&genre=FANTASY&sortBy=RELEVANCE&page=0&size=10",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Search Stories (by language)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/search/stories?language=en&sortBy=NEWEST&page=0&size=20",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Autocomplete",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/search/autocomplete?prefix=adv&limit=5",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

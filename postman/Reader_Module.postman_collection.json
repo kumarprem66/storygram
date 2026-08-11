@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "StoryVerse - Reader Module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "accessToken", "value": "" },
+    { "key": "storyId", "value": "" },
+    { "key": "chapterId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Start Reading",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/reading/start?storyId={{storyId}}&chapterId={{chapterId}}",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Update Progress",
+      "request": {
+        "method": "PUT",
+        "url": "{{baseUrl}}/api/v1/reading/progress?storyId={{storyId}}&chapterId={{chapterId}}&chapterIndex=0&percentage=45.5&sessionSeconds=300",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Add Bookmark",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/bookmarks?storyId={{storyId}}&chapterId={{chapterId}}&note=Great%20chapter",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    },
+    {
+      "name": "Create Collection",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/collections?name=My%20Favorites&description=Stories%20I%20love&visibility=PRIVATE",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }]
+      }
+    }
+  ]
+}

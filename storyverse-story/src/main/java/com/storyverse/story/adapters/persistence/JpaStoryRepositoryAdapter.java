@@ -8,6 +8,7 @@ import com.storyverse.story.ports.StoryRepository;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -52,7 +53,28 @@ public class JpaStoryRepositoryAdapter implements StoryRepository {
 
     @Override
     public Story save(Story story) {
-        StoryJpaEntity entity = StoryMapper.toEntity(story);
+        Optional<StoryJpaEntity> existing = springDataRepository.findById(story.getId());
+
+        StoryJpaEntity entity;
+        if (existing.isPresent()) {
+            entity = existing.get();
+            entity.setAuthorId(story.getAuthorId());
+            entity.setTitle(story.getTitle());
+            entity.setSubtitle(story.getSubtitle());
+            entity.setDescription(story.getDescription());
+            entity.setGenre(story.getGenre() != null ? story.getGenre().name() : null);
+            entity.setTags(new HashSet<>(story.getTags()));
+            entity.setLanguage(story.getLanguage());
+            entity.setAgeRating(story.getAgeRating() != null ? story.getAgeRating().name() : null);
+            entity.setVisibility(story.getVisibility() != null ? story.getVisibility().name() : null);
+            entity.setStatus(story.getStatus() != null ? story.getStatus().name() : null);
+            entity.setCoverImageUrl(story.getCoverImageUrl());
+            entity.setTotalWordCount(story.getTotalWordCount().getValue());
+            entity.setPublishedAt(story.getPublishedAt());
+        } else {
+            entity = StoryMapper.toEntity(story);
+        }
+
         StoryJpaEntity saved = springDataRepository.save(entity);
         return StoryMapper.toDomain(saved);
     }
